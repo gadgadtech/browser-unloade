@@ -1,4 +1,4 @@
-apiVersion: v1alpha
+version: 1.0.0
 kind: Project
 metadata:
   name: browser-unloade
