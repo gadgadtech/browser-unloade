@@ -12,7 +12,3 @@ spec:
       branch: master
       at: "0 */3 * * *"
       pipeline_file: ".semaphore/job.yml"
-agent:
-  machine:
-    type: e1-standard-2
-    os_image: ubuntu1804
