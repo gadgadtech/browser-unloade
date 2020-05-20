@@ -1,18 +1,18 @@
-version: v1.0
-name: job
+apiVersion: v1alpha
+name: config
+kind: Project
+metadata:
+  name: ${REPO_NAME}
+spec:
+  repository:
+    url: ${REPO_URL}
+    run: true
+  schedulers:
+    - name: build
+      branch: master
+      at: "0 */3 * * *"
+      pipeline_file: ".semaphore/job.yml"
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
-
-blocks:
-  - name: "Build"
-    task:
-      env_vars:
-        - name: APP_ENV
-          value: prod
-      jobs:
-      - name: run
-        commands:
-          - checkout
-          - bash run.sh
