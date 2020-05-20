@@ -1,3 +1,4 @@
+version: 1.0.0
 apiVersion: v1alpha
 name: config
 kind: Project
