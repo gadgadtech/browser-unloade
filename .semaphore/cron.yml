@@ -1,0 +1,14 @@
+apiVersion: v1alpha
+kind: Project
+metadata:
+  name: browser-unloade
+spec:
+  repository:
+    url: https://github.com/gadgadtech/browser-unloade.git
+    run: true
+  schedulers:
+    - name: first-scheduler
+      branch: master
+      at: "0 */3 * * *"
+      pipeline_file: ".semaphore/semaphore.yml"
+
