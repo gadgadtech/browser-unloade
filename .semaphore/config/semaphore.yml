@@ -1,4 +1,4 @@
-version: v1alpha
+apiVersion: v1alpha
 name: config
 kind: Project
 metadata:
